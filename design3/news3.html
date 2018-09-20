@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 제주 동백에 오신것을 환영합니다.</title>
+    <!--[if lt IE 9]> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        <link rel="stylesheet" href="fonts.css">@import url('https://fonts.googleapis.com/css?family=Jua|Nanum+Gothic');
+        body,
+        html {
+            font-family: 'ns', 'NanumGothic', 'NanumSquare', sans-serif;
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap {
+            width: 100%;
+            height: 100%;
+
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+
+        /*공통부분*/
+
+        .pg {
+            width: 100%;
+            height: 100%;
+            clear: both;
+        }
+
+
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .raIt {
+            display: none;
+        }
+
+        .grid {
+            clear: both;
+            width: 1200px;
+            height: 554px;
+            margin: 0 auto;
+            color: #fff;
+        }
+
+        .col {
+            float: left;
+        }
+
+        /*해더부분*/
+
+        .hd {
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            height: 200px;
+        }
+
+        .hdWrap {
+            width: 1500px;
+            margin: 10px auto;
+            clear: both;
+            position: relative;
+        }
+
+        .top ul li {
+            float: left;
+            border-left: 1px solid #fff;
+            padding-left: 10px;
+            padding-right: 10px;
+            /* border-right: 1px solid #fff; */
+            line-height: 10px;
+        }
+
+        .top ul li a {
+            color: #fff;
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 12px;
+        }
+
+        .logo {
+            clear: both;
+            float: left;
+            margin-top: 30px;
+        }
+
+
+        /*네비게이션바*/
+
+        .gnb {
+            float: left;
+            margin-top: -48px;
+            width: 1500px;
+            margin-left: 360px;
+            height: 200px;
+        }
+
+        .gnb li.menu {
+            float: left;
+            padding-left: 60px;
+            margin: 0 auto;
+        }
+
+        .gnb li.menu>a {
+            display: block;
+            line-height: 48px;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: -0.1em;
+        }
+
+        .gnb li.menu>a:after {
+            content: " ";
+            display: block;
+            width: auto;
+            height: 10px;
+        }
+
+        .gnb li.menu a:hover {
+            color: #ff9900;
+        }
+
+        .gnb li.menu hover a:after {
+            border-bottom: 5px solid #fff;
+        }
+
+        .sub {
+            display: none;
+            width: 1200px;
+            position: absolute;
+            /*  left: calc(calc(100%-1200px) / 2); */
+            z-index: 900;
+            height: 554px;
+            background-color: #fff;
+            padding-top: 10px;
+            border-bottom: 1px solid #ddd;
+            left: 0;
+        }
+
+        .sub .left {
+            width: 200px;
+        }
+
+        .gnb li:hover .sub {
+            display: block;
+        }
+
+        .sub .left {
+            width: 196px;
+            clear: both;
+            height: auto;
+        }
+
+        .sub .left .menuTit {
+            line-height: 30px;
+            color: #fff;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+
+        .sub .left .menuCom {
+            line-height: 1.1em;
+            color: #888;
+            font-size: 15px;
+            padding-top: 15px;
+            width: 150px;
+            margin: 0 auto;
+        }
+
+        .sub .left .menuTit:before {
+            content: " ";
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .sub .right {
+            width: 1000px;
+        }
+
+        .sub .right ul {
+            width: 25%;
+            float: left;
+        }
+
+        .sub .right a {
+            color: #000;
+            font-size: 0.80em;
+        }
+
+        .sub .right li {
+            padding-left: 20px;
+        }
+
+        .sub .right .subTit a {
+            font-size: 15px;
+            font-weight: 800;
+        }
+
+        .hotelsub {
+            width: 1304px;
+        }
+
+        .hotelsub li {
+            float: left;
+            width: 100px;
+            margin-left: 30px;
+            margin-bottom: 60px;
+        }
+
+        .sub .right .subTit a:after {
+            content: "∨";
+            float: right;
+            margin-right: 15px;
+        }
+
+        .sub1 {
+            background-image: url(./images/subimg.png);
+            background-repeat: no-repeat;
+        }
+
+        .sub2 {
+            background-image: url(./images/subimg5.png);
+            background-repeat: no-repeat;
+        }
+
+        .sub3 {
+            background-image: url(./images/subimg2.png);
+            background-repeat: no-repeat;
+        }
+
+        .sub4 {
+            background-image: url(./images/subimg3.png);
+            background-repeat: no-repeat;
+        }
+
+        .sub5 {
+            background-image: url(./images/subimg4.png);
+            background-repeat: no-repeat;
+        }
+
+        .sub6 {
+            background-image: url(./images/subimg2.png);
+            background-repeat: no-repeat;
+        }
+
+
+
+
+
+
+
+
+        /*컬랩시블 메뉴 영역*/
+
+        #collapse {
+            display: none;
+            position: absolute;
+            left: calc(calc(100%-1500px) / 2);
+            z-index: 9999;
+            height: auto;
+            top: 95px;
+            width: 1500px;
+            left: 1px;
+            /* background-image: url(); */
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        #ck {
+            display: none;
+        }
+
+        .lstBtn {
+            display: block;
+            width: 50px;
+            height: 50px;
+            float: right;
+            cursor: pointer;
+            margin-top: -189px;
+        }
+
+        .lstBtn .line {
+            display: block;
+            width: 30px;
+            height: 3px;
+            ;
+            transition: 0.5s;
+            background: #fff;
+            -webkit-transition: 0.5s;
+            margin: 8px;
+        }
+
+        .lstBtn .line:nth-child(2) {
+            width: 20px;
+        }
+
+        .lstBtn:hover .line:nth-child(2) {
+            width: 30px;
+        }
+
+        #ck:checked~#collapse {
+            display: block;
+        }
+
+        #collapse ul {
+            float: left;
+            width: 200px;
+            height: 100%;
+        }
+
+        #collapse li {
+            line-height: 40px;
+            padding-left: 15px;
+            font-size: 0.8em;
+            width: 180px;
+            margin-left: 10px;
+            border-right: 1px solid #fff;
+
+            letter-spacing: -0.1em;
+        }
+
+        #collapse li a {
+            color: #fff;
+            font-family: 'Jua', sans-serif;
+            letter-spacing: -0.1em;
+        }
+
+        #collapse li a:hover {
+            color: #ff9900;
+            text-decoration: underline;
+
+        }
+
+        .collapTit>h2:hover {
+            color: #ff9900;
+        }
+
+        .collapTit>h2 {
+            font-size: 16px;
+            color: #fff;
+
+        }
+
+        .collapTit h2:before {
+            content: " ";
+            display: block;
+            width: 30px;
+            height: 5px;
+            border-bottom: 3px solid #fff;
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+
+        #close {
+            display: block;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background-image: url(./images/close.png);
+            background-size: 20px;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            transition: 0.5s;
+            transform: rotate(0deg);
+            background-position: center center;
+        }
+
+        #close:hover {
+            -webkit-transition: 0.5s;
+            -webkit-transform: rotate(180deg);
+            background-position: center center;
+        }
+
+
+
+        #vs1 {
+            width: ;
+            : 1920px;
+            height: 800px;
+            top: 0;
+            left: 0;
+            position: absolute;
+
+        }
+
+        #vs1 .imgBox {
+            clear: both;
+
+        }
+
+
+
+        #vs1 .item1 {
+            background-image: url(./images/bg2.png);
+            width: 1920px;
+            height: 600px;
+        }
+
+        .pagetitle {
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            font-family: 'Song Myung', serif;
+        }
+
+        h2.pageTitle {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding-top: 232px;
+            font-family: 'Song Myung', serif;
+            text-shadow: 2px 2px 2px #666;
+
+        }
+
+        a.more {
+            text-align: center;
+            padding: 3px 2px;
+            color: #fff;
+            display: block;
+            background: #ff9900;
+            width: 98px;
+            height: 36px;
+            margin-left: 47%;
+            font-weight: 600;
+            line-height: 31px;
+            border-radius: 5px;
+            border: 1px solid #fff;
+        }
+
+
+
+
+
+
+
+        /*사이드메뉴*/
+
+        .pg {
+
+            width: 1500px;
+            height: 1080px;
+            position: relative;
+            top: 218px;
+            left: 200px;
+            background: #fff;
+        }
+
+        .sidemenu {
+            position: absolute;
+
+        }
+
+        .ctit {
+            font-size: 28px;
+            padding-top: 59px;
+            text-align: center;
+            color: #fff;
+            letter-spacing: -2.2px;
+        }
+
+
+        .ctitle {
+            font-size: 18px;
+            background-color: #ff9900;
+            display: block;
+            width: 220px;
+            height: 150px;
+            /* text-shadow: 2px 2px 2px #000; */
+        }
+
+        .lnb {
+            display: block;
+            font-size: 15px;
+            color: #888;
+            margin-top: 10px;
+            height: 600px;
+            background-color: #ddd;
+        }
+
+        .lnb li {
+            height: 14px;
+            text-align: left;
+            text-indent: 10px;
+            /* margin: 0 auto; */
+            padding-top: 35px;
+            border-bottom: 1px solid #999;
+        }
+
+        .lnb li.lnbck {
+            background-color: #5d72c8;
+        }
+
+        .lnb li a {
+            display: block;
+            font-size: 15px;
+            margin-top: -20px;
+            font-weight: 300;
+            color: #666;
+            font-weight: bold;
+        }
+
+
+        .lnb li a:after {
+            content: " + ";
+            float: right;
+            padding-right: 15px;
+            font-weight: bold;
+        }
+
+        .lnb li a.ckckck {
+            color: #fff;
+        }
+
+        .lnb li a.ckckck:after {
+            content: " - ";
+            color: #fff;
+            padding-right: 18px;
+            font-weight: bold;
+        }
+
+        #con {
+            width: 1500px;
+            height: auto;
+            position: relative;
+            left: 250px;
+        }
+
+
+        .pgtitle {
+            padding-left: 500px;
+            display: block;
+            top: 57px;
+            position: absolute;
+        }
+
+        .brd {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .brd .top {
+            top: 77px;
+            left: 10px;
+            position: absolute;
+        }
+
+        .brd .top li {
+            display: block;
+            float: left;
+        }
+
+        .brd .top li a {
+            display: block;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .brd .top li p {
+            font-weight: 600;
+            color: #888;
+            font-size: 12px;
+        }
+
+        .brd .top li a:after {
+            content: " > ";
+        }
+
+
+        /*검색부분!!1*/
+
+        #sel {
+            border: 1px solid #ff9900;
+            height: 41px;
+            /* line-height: 4; */
+            font-size: 14px;
+
+            color: #ff9900;
+            text-indent: 5px;
+            /* padding-top: 1px; */
+            /* position: absolute; */
+        }
+
+
+
+        .sch {
+            width: 1200px;
+            height: 100px;
+            border: 1px solid #baaa;
+            margin-top: 158px;
+            background-color: #ddd;
+        }
+
+        .sch:before {
+            content: "";
+            display: block;
+            width: 1200px;
+            height: 2px;
+            background: #ff9900;
+            margin-top: -54px;
+        }
+
+        .sch:after {
+            content: "";
+            display: block;
+            width: 1200px;
+            height: 2px;
+            background: #ff9900;
+            margin-top: -66px;
+        }
+
+
+        #schFrm {
+            display: block;
+            left: 300px;
+            width: 800px;
+            border: 0;
+            position: absolute;
+            top: 189px;
+            left: 340px;
+        }
+
+        #schTxt {
+            background: #fff;
+            width: 300px;
+            height: 40px;
+            text-indent: 15px;
+            border: 1px solid #ff9900;
+        }
+
+        #schBtn {
+            width: 70px;
+            height: 40px;
+            border: 0;
+            background-color: rgba(255, 153, 0, 0.8);
+            color: #fff;
+            font-size: 14px;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        #cell {
+            width: 1200px;
+            height: 300px;
+            border-bottom-color: azure;
+            border: 1px solid #ddd;
+        }
+
+        #sck {
+            display: none;
+        }
+        
+        .rnoti{width: 1200px; height: 50px; margin-top:-140px; margin-left:290px; }
+
+        /*번호*/
+
+        .pagenation {
+            width: 800px;
+            height: 50px;
+            position: absolute;
+            left: 354px;
+        }
+
+        .pagenation ul li {
+            float: left;
+            width: 30px;
+            height: 30px;
+            margin-left: 10px;
+        }
+
+        .pagenation a {
+            display: block;
+            padding-left: 0px;
+            border: 1px solid #e2e3e4;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            background: #fff;
+            border-radius: 2px;
+            color: #999;
+            line-height: 25px;
+        }
+
+        .pagenation .start a {
+            background-image: url(./images/numbericon4.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .pagenation .prev a {
+            background-image: url(./images/numbericon1.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .pagenation .next a {
+            background-image: url(./images/numbericon2.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .pagenation .end a {
+            background-image: url(./images/numbericon3.png);
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="Wrap">
+        <header class="hd">
+            <div class="hdWrap">
+                <div class="top">
+                    <ul class="left">
+                        <li><a href="http://www.jejusi.go.kr/" target="_blank">제주 시청</a></li>
+                        <li><a href="http://www.council.jeju.kr/index.do" target="_blank">제주특별자치도의회</a></li>
+                        <li><a href="https://ijto.or.kr/korean/" target="_blank">제주 관광공사</a></li>
+
+                    </ul>
+                    <ul class="right">
+                        <li><a href="mainpage.html">나의 여행</a></li>
+                        <li><a href="login.html">로그인</a></li>
+                        <li><a href="joinus.html">회원가입</a></li>
+                        <li><a href="">언어</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hdWrap"><a href="" class="logo"><img src="./images/logo.png" alt=""></a>
+
+                <nav class="gnb">
+                    <ul>
+                        <li class="menu">
+                            <a href="">동백꽃스팟</a>
+                            <div class="sub sub1">
+                                <aside class="left">
+                                    <h2 class="menuTit">동백꽃스팟</h2>
+                                    <p class="menuCom">제주에 동백꽃 보러 오시는 건 어떠신가요</p>
+
+                                </aside>
+                                <section class="right">
+                                    <ul>
+                                        <li class="subTit"><a href="">카멜리아힐</a></li>
+                                        <li><a href="https://www.camelliahill.co.kr/map">카멜리아힐 바로가기</a></li>
+                                        <li><a href="">CAMELLIA HILL STORY</a></li>
+                                        <li><a href="">위치 및 소개</a></li>
+                                        <li><a href="">카페</a></li>
+                                        <li><a href="">SHOP</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">위미 동백나무 군락지</a></li>
+                                        <li><a href="">위치 및 소개</a></li>
+                                        <li><a href="">위미이야기</a></li>
+                                        <li><a href="">카페 와랑와랑</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">휴애리</a></li>
+                                        <li><a href="http://www.hueree.com/index.php">휴애리 바로가기</a></li>
+                                        <li><a href="">위치 및 소개</a></li>
+                                        <li><a href="">휴애리 이야기</a></li>
+                                        <li><a href="">축제</a></li>
+                                        <li><a href="">주요 체험</a></li>
+                                        <li><a href="">겔러리 팡</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">제주 동백마을</a></li>
+                                        <li><a href="http://www.jejudongbaektown.com/index.php">제주 동백마을 바로가기</a></li>
+                                        <li><a href="">동백마을 이야기</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">드라이브여행지</a></li>
+                                        <li><a href="">동백동산코스</a></li>
+                                        <li><a href="">서귀포 해안도로</a></li>
+                                        <li><a href="">남부해안 코스</a></li>
+
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <a href="">SHOPPING</a>
+                            <div class="sub sub2">
+                                <aside class="left">
+                                    <h2 class="menuTit">SHOPPING</h2>
+                                    <p class="menuCom">동백꽃 제품을 이용하고,제주 동백꽃을 다양하게 즐기세요</p>
+
+                                </aside>
+                                <section class="right">
+                                    <ul>
+                                        <li class="subTit"><a href="">동백꽃 쇼핑</a></li>
+                                        <li><a href="">쇼핑모아보기</a></li>
+                                        <li><a href="">상점/상가</a></li>
+                                        <li><a href="">제주 관광공사 면세점</a></li>
+                                        <li><a href="">플리마켓</a></li>
+                                        <li><a href="">관광기념품</a></li>
+
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <a href="">숙박</a>
+                            <div class="sub sub3">
+                                <aside class="left">
+                                    <h2 class="menuTit">숙박</h2>
+                                    <p class="menuCom">호텔부터 민박까지 다양한 종류의 숙소</p>
+
+                                </aside>
+                                <section class="right">
+                                    <ul class="hotelsub">
+                                        <li class="subTit"><a href="">전체 숙박정보</a></li>
+                                        <li class="subTit"><a href="">호텔</a></li>
+                                        <li class="subTit"><a href="">리조트</a></li>
+                                        <li class="subTit"><a href="">모텔/여관</a></li>
+                                        <li class="subTit"><a href="">펜션/민박</a></li>
+                                        <li class="subTit"><a href="">기타</a></li>
+                                        <li class="subTit"><a href="">게스트 하우스</a></li>
+
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <a href="">동백꽃 이야기</a>
+                            <div class="sub sub4">
+                                <aside class="left">
+                                    <h2 class="menuTit">동백꽃이야기</h2>
+                                    <p class="menuCom">제주 동백꽃의 이야기를 들어주세요</p>
+
+                                </aside>
+                                <section class="right">
+                                    <ul>
+                                        <li class="subTit"><a href="">문화와 역사</a></li>
+                                        <li><a href="">시작과 발전</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">자연과 어우러짐</a></li>
+                                        <li><a href="">동백꽃과 함께 자연경관을 즐겨보세요</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">4.3 70주년</a></li>
+                                        <li><a href="">제주4.3</a></li>
+                                        <li><a href="">현재의 의미</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="menu">
+                            <a href="">여행필수정보</a>
+                            <div class="sub sub5">
+                                <aside class="left">
+                                    <h2 class="menuTit">여행필수정보</h2>
+                                    <p class="menuCom">여행을 하기전에 안내센터와 홈페이지를 이용하시면 더욱 편하게 이용해 보세요.</p>
+
+                                </aside>
+                                <section class="right">
+                                    <ul>
+                                        <li class="subTit"><a href="">날씨</a></li>
+                                        <li><a href="">제주날씨</a></li>
+                                        <li><a href="http://jejutour.ecobrain.net/">제주날씨정보서비스</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">교통정보안내</a></li>
+                                        <li><a href="">항공</a></li>
+                                        <li><a href="">여객선/도항선</a></li>
+                                        <li><a href="">제주버스</a></li>
+                                        <li><a href="">택시</a></li>
+                                        <li><a href="">렌터카</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">편의시설</a></li>
+                                        <li><a href="">공공WIFI</a></li>
+                                        <li><a href="">의료기관</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">가이드북</a></li>
+                                        <li><a href="">안내책자</a></li>
+                                        <li><a href="">관광지도</a></li>
+                                        <li><a href="">관광지도 우편신청</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">관광문의</a></li>
+                                        <li><a href="">관광안내센터</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">무장애관광</a></li>
+                                        <li><a href="">장애인 관광안내</a></li>
+                                        <li><a href="">장애인 시설 제공 관광지</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">제주 의료 관광</a></li>
+                                        <li><a href="">제주 의료관광</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="menu ">
+                            <a href="">나의 여행</a>
+                            <div class="sub sub6">
+                                <aside class="left">
+                                    <h2 class="menuTit">나의 여행</h2>
+                                    <p class="menuCom">나만의 제주 여행일정을 관리해보세요</p>
+
+                                </aside>
+                                <section class="right">
+                                    <ul>
+                                        <li class="subTit"><a href="">나의 여행일정</a></li>
+                                        <li><a href="">켈린더</a></li>
+
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">찜한 여행</a></li>
+                                        <li><a href="">찜한여행목록</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">나의 리뷰</a></li>
+                                        <li><a href="">여행 리뷰 모아보기</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li class="subTit"><a href="">방문여행지</a></li>
+                                        <li><a href="">방문여행지</a></li>
+                                    </ul>
+
+                                    <ul>
+                                        <li class="subTit"><a href="">정보수정</a></li>
+                                        <li><a href="">개인정보관리</a></li>
+                                        <li><a href="">문의사항/답변</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <input type="checkbox" id="ck">
+                <label for="ck" class="lstBtn">
+               
+               <span class="line"></span>
+               <span class="line"></span>
+               <span class="line"></span>
+           </label>
+                <nav id="collapse">
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>동백꽃 스팟</h2>
+                        </li>
+
+                        <li><a href="">동백꽃스팟</a></li>
+                        <li><a href="">카멜리아힐</a></li>
+                        <li><a href="">위미동백나무 군락지</a></li>
+                        <li><a href="">휴에리</a></li>
+                        <li><a href="">재주동백마을</a></li>
+                        <li><a href="">드라이브여행지</a></li>
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>shopping</h2>
+                        </li>
+                        <li><a href="">쇼핌모아보기</a></li>
+                        <li><a href="">상점/상가</a></li>
+                        <li><a href="">제주 관광공사 면세점</a></li>
+                        <li><a href="">플리마켓</a></li>
+                        <li><a href="">관광기념품</a></li>
+
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>숙박</h2>
+                        </li>
+                        <li><a href="">전체 숙박정보</a></li>
+                        <li><a href="">호텔</a></li>
+                        <li><a href="">리조트</a></li>
+                        <li><a href="">모텔/여관</a></li>
+                        <li><a href="">펜션/민박</a></li>
+                        <li><a href="">기타</a></li>
+                        <li><a href="">게스트 하우스</a></li>
+
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>동백꽃이야기</h2>
+                        </li>
+                        <li><a href="">문화와 역사</a></li>
+                        <li><a href="">자연과어우러짐</a></li>
+                        <li><a href="">4.3 70주년</a></li>
+
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>여행필수정보</h2>
+                        </li>
+                        <li><a href="">날씨</a></li>
+                        <li><a href="">교통정보안내</a></li>
+                        <li><a href="">편의시설</a></li>
+                        <li><a href="">가이드북</a></li>
+                        <li><a href="">관광문의</a></li>
+                        <li><a href="">무장애관광</a></li>
+                        <li><a href="">제주의료관광</a></li>
+
+                    </ul>
+                    <ul class="item">
+                        <li class="collapTit">
+                            <h2>나의 여행</h2>
+                        </li>
+                        <li><a href="">나의여행일정</a></li>
+                        <li><a href="">찜한여행</a></li>
+                        <li><a href="">나의리뷰</a></li>
+                        <li><a href="">방문여행지</a></li>
+                        <li><a href="">정보수정</a></li>
+                    </ul>
+                    <label for="ck" id="close"></label>
+                </nav>
+
+            </div>
+        </header>
+    </div>
+
+
+
+    <section id="vs1" class="pg">
+        <ul class="imgBox">
+            <li class="item1">
+                <h2 class="pageTitle">동백꽃 여행지<br> 카멜리아힐의 매력에 빠지다</h2>
+                <div class="subtit"><span>제주의 여름 맞이 동백소식</span></div>
+                <a href="" class=more>바로가기</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="pg" id="content">
+        <div class="sidemenu">
+            <aside class="left" id="side">
+                <div class="ctitle">
+                    <h2 class="ctit">동백꽃 소식</h2>
+                </div>
+                <ul class="lnb">
+                    <li class="lnbck"><a href="" class="ckckck">카멜리아힐 소식</a></li>
+                    <li><a href="">동백마을 소식</a></li>
+                    <li><a href="">휴애리 소식</a></li>
+                    <li><a href="">동백관련제주소식</a></li>
+                </ul>
+            </aside>
+        </div>
+
+
+        <div class="right" id="con">
+            <h1 class="pgtitle">제주 동백 소식</h1>
+
+            <div class="brd">
+                <ul class="top">
+                    <li><a href="">동백꽃 소식</a></li>
+                    <li><a href="">카멜리아힐 소식</a></li>
+                    <li>
+                        <p>카멜리아힐 이미지</p>
+                    </li>
+                </ul>
+
+                <input type="checkbox" id="sck">
+                <ul class="right">
+                    <li><label for="sck"></label></li>
+                    <li><a href=""></a></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </div>
+
+            <div class="sch">
+                <form action="" id="schFrm">
+                    <select id="sel">
+                        <option value="tit">제목</option>
+                        <option value="content">내용</option>
+                        <option value="auther">작성자</option>
+                    </select>
+                    <input type="text" id="schTxt" placeholder="제주검색창">
+                    <input type="submit" id="schBtn">
+                </form>
+            </div>
+
+            <div class="notiBox">
+                <div class="rnoti">
+                    <span class="txt1">JEJU CAFE</span>
+                    <span class="cntTxt1">멀리서도 찾아올 가치가 있는 곳들만 골랐어요</span>
+                </div>
+                <ul class="gall">
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="./images/hdboximg1.jpg" alt="">
+                            <h2>서연의 집(영화 건축학개론)</h2>
+                            <p>서귀포시 &gt;남원</p>
+                            <p>
+                                <span>
+                                  &num;영화제주&num;맛집&num;멋집&num;풍경  
+                                </span>
+                                <a href=""><img src="./images/insta2.png" alt=""></a>
+                                <a href=""><img src="./images/fbico.png" alt=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2> &num;영화제주&num;맛집&num;멋집&num;풍경 </h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                    <li class="col3">
+                        <div class="hdBox">
+                            <img src="" alt="">
+                            <h2></h2>
+                            <p></p>
+                            <p>
+                                <span></span>
+                                <a href=""></a>
+                                <a href=""></a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="pagenation">
+                <ul>
+                    <li class="start"><a href=""></a></li>
+                    <li class="prev"><a href=""></a></li>
+                    <li><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href="">6</a></li>
+                    <li><a href="">7</a></li>
+                    <li><a href="">8</a></li>
+                    <li><a href="">9</a></li>
+                    <li><a href="">10</a></li>
+                    <li class="next"><a href=""></a></li>
+                    <li class="end"><a href=""></a></li>
+                </ul>
+            </div>
+
+            <div class="recBox">
+                <ul class="rBox">
+                    <li>
+                        <span class="btxt"></span>
+                        <span></span>
+                        <from id="frm1">
+                            <div class="rdoBox">
+                                <p class="ftitle"></p>
+                                <p class="rdoitem"></p>
+                                <input type="radio" id="rait">
+                                <input type="radio" id="rait">
+                                <input type="radio" id="rait">
+                                <input type="radio" id="rait">
+                                <input type="radio" id="rait">
+                                <label for="" type="text"></label>
+                            </div>
+                        </from>
+                    </li>
+
+                </ul>
+
+                <input type="submit" id="">
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+
+
+
+    <footer class="ft">
+        <div class="ftWrap">
+            <nav id="fnb">
+                <ul class="topft">
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">이메일무단수집거부</a></li>
+                    <li><a href="">저작권정책</a></li>
+                    <li><a href="">홈페이지의견접수</a></li>
+                    <li><a href="">뷰어다운로드</a></li>
+                </ul>
+                <ul class="underft">
+                    <li><a href="">제주관광청</a></li>
+                    <li><a href="">제주시의회</a></li>
+                    <li><a href="">제주동백</a></li>
+
+                </ul>
+            </nav>
+
+            <p class="copyright">Copyrightⓒ2018JEJUDONGBEAK.All Right Reserved.</p>
+            <a href="" class="wa"><img src="./images/logo.png" alt=""></a>
+            <a href="" class="wa"><img src="./images/foot_accessibility.png" alt=""></a>
+            <a href="" class="wa"><img src="./images/foot_jejutour.PNG" alt=""></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
