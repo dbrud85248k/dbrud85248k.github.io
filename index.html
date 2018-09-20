@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>라노아에 오신 것을 환영합니다.</title>
+    <style>
+        /*    default*/
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            width: 100%;
+            height: 100%;
+            min-width: 1600px;
+
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+    </style>
+
+    <style>
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet"><link href="https://fonts.googleapis.com/css?family=Merriweather|Nanum+Myeongjo" rel="stylesheet"><style>
+        /* reset*/
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            border: 0;
+            background: 0;
+        }
+
+    </style>
+
+    <style>
+        /*  공통 부분  */
+
+        section {
+            height: 975px;
+            width: 1920px;
+            top: 0;
+            position: absolute;
+        }
+
+        #fix {
+            position: fixed
+        }
+
+        .Wrap {
+
+            width: 100%;
+
+        }
+
+        .hd {
+            width: 100%;
+            height: 110px;
+
+            position: relative;
+        }
+
+        .right {
+            float: right;
+        }
+
+        .kor {
+            letter-spacing: -1px;
+        }
+
+        .more {
+            display: block;
+            position: absolute;
+            left: 240px;
+            font-weight: bold;
+            top: 224px;
+
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 60;
+            width: 0;
+            opacity: 0;
+            height: 40px;
+        }
+
+        .hd.bgfff {
+            background: #fff;
+            width: 100%;
+
+            height: 150px;
+            z-index: 999;
+        }
+
+    </style>
+
+
+    <style>
+        /* 네비게이션 바 */
+
+        .hdWrap {
+            width: 1600px;
+            height: 110px;
+            position: absolute;
+            top: 40px;
+            left: 150px;
+            z-index: 999;
+        }
+
+        .hdWrap ul {
+            float: left;
+        }
+
+        .logo.w {
+            position: absolute;
+            width: 128px;
+            height: 100px;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            left: 100px;
+            top: 0;
+            margin-top: -19px;
+            background-image: url(images/logo.png);
+        }
+
+        .tnb {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+        }
+
+        .tnb li {
+            float: left;
+        }
+
+        .tnb li a {
+            display: block;
+            font-size: 14px;
+            font-weight: 800;
+            color: #0f0044;
+            margin-left: 40px;
+        }
+
+        .tnb li .bar1:after {
+            content: "/";
+            display: block;
+            position: absolute;
+            width: 10px;
+            margin-left: 56px;
+            height: 20px;
+            margin-top: -5px;
+            top: 0;
+            font-size: 19px;
+            font-weight: 900;
+        }
+
+
+        .gnb {
+
+            float: right;
+            margin-top: 46px;
+        }
+
+        .gnb li {
+            float: left;
+        }
+
+        /*    gnb a 이롭게 바탕체medium 으로 적용ㅇ!    */
+
+        .gnb a {
+            font-family: 'Nanum Myeongjo', serif;
+            font-weight: 800;
+            font-size: 20px;
+            color: #565656;
+            margin-left: 60px;
+        }
+
+
+
+
+        /*  page1   */
+
+        .totop {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50px;
+            border: 1px solid #ddd;
+            position: fixed;
+            z-index: 9999;
+            margin-left: 1800px;
+            margin-top: 800px;
+        }
+
+        .totop span {
+            display: block;
+            text-align: center;
+            font-size: 15px;
+            font-weight: 600;
+            color: #555;
+            margin-top: 12px;
+        }
+
+        #menu_ck {
+            display: none;
+        }
+
+        .collapsmanu {
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            background: #000099;
+
+        }
+
+        #open {
+            width: 70px;
+            height: 70px;
+            background-image: url(images/colopen.png);
+            z-index: 900;
+            background-size: 50px 50px;
+            background-repeat: no-repeat;
+            position: absolute;
+            background-position: center center;
+            top: 0;
+            left: 0;
+
+        }
+
+
+        #open:hover {
+            transform: rotate(90deg);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        #open:checked {
+            background-size: 101%;
+        }
+
+        #menu_ck:checked~.collap {
+            margin-left: -159px;
+            transition: 0.6s;
+        }
+
+        .collap {
+            overflow: hidden;
+            background: rgba(255, 255, 255, 1);
+            width: 1000px;
+            overflow: hidden;
+            height: 900px;
+            margin-top: -90px;
+            margin-left: -1200px;
+        }
+
+        .logo.navy {
+            background-image: url(./images/logo.png);
+
+            width: 132px;
+            height: 100px;
+            background-position: bottom;
+            display: block;
+            object-position: center;
+            margin: -79px 250px;
+        }
+
+        #close {
+            background-image: url(./images/colclose.png);
+            background-repeat: no-repeat;
+            background-size: ;
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-position: center center;
+            margin-left: 169px;
+            /* margin: 0; */
+            margin-top: 99px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+
+        #close:active {
+            background-size: 90%;
+            transition: 0.3s;
+            display: block;
+        }
+
+
+
+        .collap li {
+            display: block;
+
+        }
+
+        .collap li:hover {
+            margin-left: 30px;
+            margin-right: 0;
+            display: block;
+            transition: 0.6s;
+        }
+
+        .collap li .mename:hover {
+            color: #004a62;
+            font-weight: 600;
+        }
+
+
+
+        .collap li .mename {
+            display: block;
+            font-size: 40px;
+            color: #565656;
+            font-family: 'Nanum Myeongjo', serif;
+            line-height: 90px;
+            font-weight: 500;
+        }
+
+        .melist li label {
+            width: 300px;
+            height: 100px;
+            display: block;
+
+        }
+
+        label.mename.big {
+            font-size: 31px;
+        }
+
+        .melist {
+            height: 60px;
+            width: 400px;
+            margin-top: 150px;
+            margin-left: 256px;
+        }
+
+        .meItem {
+            margin-left: -999px
+        }
+
+        #li1_ck:checked~.meSub1 li a {
+            margin-left: 31px;
+        }
+
+        #li2_ck:checked~.meSub2 li a {
+            margin-left: 31px;
+        }
+
+        #li3_ck:checked~.meSub3 li a {
+            margin-left: 31px;
+        }
+
+        #li4_ck:checked~.meSub4 li a {
+            margin-left: 31px;
+        }
+
+        #li1_ck:hover~.meSub1:before {
+            opacity: 1;
+            width: 220px;
+            transition: 0.7s;
+        }
+
+        #li2_ck:hover~.meSub2:before {
+            opacity: 1;
+            width: 205px;
+            transition: 0.7s;
+        }
+
+        #li3_ck:hover~.meSub3:before {
+            opacity: 1;
+            width: 70px;
+            transition: 0.5s;
+        }
+
+        #li4_ck:hover~.meSub4:before {
+            opacity: 1;
+            width: 200px;
+
+            transition: 0.7s;
+        }
+
+        /*
+          #li1_ck:checked ~ .meSub1:before {
+            opacity: 1;
+            width: 220px;
+            transition: 0.7s;
+        }
+
+        #li2_ck:checked~.meSub2:before {
+            opacity: 1;
+            width: 205px;
+            transition: 0.7s;
+        }
+
+        #li3_ck:checked~.meSub3:before {
+            opacity: 1;
+            width: 70px;
+            transition: 0.5s;
+        }
+
+        #li4_ck:checked~.meSub4:before {
+            opacity: 1;
+            width: 200px;
+        
+            transition: 0.7s;
+        }
+*/
+
+        .mSub {
+
+            width: 200px;
+            position: absolute;
+            margin-left: 450px;
+            margin-top: 0;
+            margin-top: -70px;
+        }
+
+        .mSub li {
+            overflow: hidden;
+        }
+
+        .mSub li a {
+            display: block;
+            font-size: 20px;
+            clear: both;
+            font-family: 'Nanum Myeongjo', serif;
+            color: #565656;
+            margin-left: -151px;
+        }
+
+        .meSub1:before {
+            display: block;
+            width: 2px;
+            border: 1px solid #004a62;
+            content: "";
+            position: absolute;
+            left: -261px;
+            top: 8px;
+            opacity: 0;
+        }
+
+        .meSub2:before {
+            display: block;
+            width: 2px;
+            border: 1px solid #004a62;
+            content: "";
+            position: absolute;
+            left: -260px;
+            top: 7px;
+            opacity: 0;
+        }
+
+        .meSub3:before {
+            display: block;
+            width: 2px;
+            border: 1px solid #004a62;
+            content: "";
+            position: absolute;
+            left: -132px;
+            top: 4px;
+            opacity: 0;
+        }
+
+        .meSub4:before {
+            display: block;
+            width: 2px;
+            border: 1px solid #004a62;
+            content: "";
+            position: absolute;
+            left: -260px;
+            top: 4px;
+            opacity: 0;
+        }
+
+    </style>
+
+
+    <style>
+        .imgSlide {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .gallery {
+            position: absolute;
+            width: 400%;
+            height: 1080px;
+        }
+
+        .gallery img {
+            display: block;
+            width: 25%;
+            height: 1080px;
+            position: absolute;
+
+        }
+
+
+        .banCon {
+            background-color: transparent;
+            width: 400%;
+            height: 250px;
+            position: absolute;
+            z-index: 8899;
+            left: 832px;
+            top: 43%;
+
+        }
+
+        .banCon li {
+            width: 25%;
+        }
+
+        .banTitleBox {
+            width: 0%;
+            float: left;
+            height: 100%;
+            opacity: 0;
+            transition-duration: 0.2s, 0.4s;
+            position: absolute;
+            left: -296px;
+            top: 0;
+            background-color: transparent;
+            transition-property: opacity;
+            transition-delay: 0.1s, 0.1s;
+        }
+
+        .banTitleBox.on {
+            width: 25%;
+            opacity: 1;
+
+        }
+
+        .banTitleBox .more.on {
+            width: 80px;
+            opacity: 1;
+
+
+        }
+
+        .banTitleBox .banTit {
+            top: 20%;
+            transition-duration: 0.6s;
+            opacity: 0;
+            transition-delay: 0.3s;
+            left: -100px;
+            clear: both;
+            position: absolute;
+            padding-top: 70%;
+            font-size: 50px;
+            color: #fff;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+
+        .banTitleBox.on .banTit {
+            padding-top: 0;
+            opacity: 1;
+        }
+
+        .banTitleBox.on .more {
+            padding-top: 0;
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        paging {
+            z-index: 999;
+            position: absolute;
+            display: block;
+            width: 40px;
+            top: 50%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+
+        .next,
+        .prev {
+            width: 100px;
+            height: 100px;
+
+
+        }
+
+        .next {
+            left: 10%;
+            background-position: center center;
+            background-image: url(./images/btn_prevpage.png);
+        }
+
+        .prev {
+            right: 10%;
+            background-image: url(./images/btn_nextpage.png);
+            background-position: center center;
+        }
+
+        .paging {
+            left: 10%;
+            top: 85%;
+            width: 200px;
+        }
+
+        .paging a,
+        paging button {
+            display: block;
+            margin: 5px;
+            float: left;
+            text-align: center;
+            width: 30px;
+            height: 30px;
+            line-height: 20px;
+            bottom: 0;
+            outline: 0;
+            background-color: transparent;
+            background-repeat: no-repeat;
+            color: #fff;
+            line-height: 30px;
+            cursor: pointer;
+            border-radius: 16px;
+        }
+
+        .paging a {
+            border: 3px solid #fff;
+            width: 24px;
+            height: 24px;
+            background-color: transparent;
+
+        }
+
+        .playBtn {
+            background-image: url(images/play.png);
+
+        }
+
+        .playBtn[control-toggle="play"] {
+            background-position: center 20px;
+        }
+
+        .playBtn[control-toggle="stop"] {
+            background-position: center -80px;
+        }
+
+    </style>
+
+
+
+    <style>
+        /*수정 작업ㅇ중 페이지 2번 슬라이드 잡지 레이아웃 5p*/
+
+        section#page2 {
+            clear: both;
+            height: 950px;
+            width: 1920px;
+            position: absolute;
+            display: block;
+            top: 1043px;
+        }
+
+        .slideWrap {
+            width: 1200px;
+            box-sizing: border-box;
+            overflow: hidden;
+            margin: 100px auto;
+        }
+
+        .rabtn {
+            display: none;
+        }
+
+
+        .imgmaga {
+            position: absolute;
+            width: 120px;
+            height: 50px;
+            box-sizing: border-box;
+
+        }
+
+        .pg2l {
+            display: block;
+            width: 14px;
+            height: 14px;
+            margin-left: 5px;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            float: left;
+            border-radius: 20px;
+            background-color: #ccc;
+
+        }
+
+
+        .pg2ConWrap {
+            width: 500%;
+            height: 650px;
+
+        }
+
+        .pg2ConWrap li {
+            float: left;
+            display: block;
+            width: 20%;
+        }
+
+
+        .raBox #p2sl1:checked~.imgmaga #imr1 {
+            background-color: #f00;
+        }
+
+        .raBox #p2sl1:checked~.pg2ConWrap #pgsl11 {
+            margin: 0;
+        }
+
+        .raBox #p2sl2:checked~.pg2ConWrap #pgsl12 {
+            margin: 1200px;
+        }
+
+        
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="ktslider2.js"></script>
+    <script src="txtslider2.js"></script>
+    <script>
+        $(window).ready(function() {
+
+            var pgw = parseInt($(".page").width());
+            var pgh = parseInt($(".page").height());
+
+
+            $(window).scroll(function() {
+                var sct = $(window).scrollTop();
+
+                if (sct >= 500) {
+                    $(".hd").css("position", "fixed");
+                    $(".hd").addClass("bgfff");
+
+                    $(".hd").not(":animated").slideDown(800);
+                    $(".totop").fadeIn(400);
+
+
+                } else if (sct >= 100) {
+                    $(".hd").css("display", "none");
+                } else {
+                    $(".hd").css("position", "absolute");
+                    $(".hd").removeClass("bgfff");
+                    $(".hd").not(":animated").slideDown(800);
+                    $(".totop").fadeOut(400);
+                }
+
+
+
+
+            });
+
+
+
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <header class="hd">
+        <div class="hdWrap" id="fix">
+            <label for="menu_ck" id="open"></label>
+
+            <a href="" class="logo w"></a>
+            <ul class="tnb right">
+                <li><a href="" class="bar1 kor">한국어</a></li>
+
+                <li><a href="">English</a></li>
+            </ul>
+            <nav class="gnb right">
+                <ul>
+                    <li><a href="" class="kor">COMMUNITY</a></li>
+                    <li><a href="" class="kor">기업사회공헌</a></li>
+                    <li><a href="" class="kor">MEET US</a></li>
+                </ul>
+            </nav>
+            <nav class="collapsmanu">
+                <!--            강사님 수정 부분/ 콜렙스 메뉴 열어야할때 이거 넣어서 해야함!
+                    <label for="checkbox"id="menu_ck" class="ckitem"></label>   -->
+
+                <input type="checkbox" class="ckItem" id="menu_ck">
+
+                <ul class="collap">
+
+                    <label for="menu_ck" id="close"></label>
+                    <a href="" class="logo navy"></a>
+                    <div class="melist">
+                        <li>
+                            <input type="radio" class="meItem" id="li1_ck">
+
+
+
+                            <label for="li1_ck" class=mename>
+                                    LANOA
+                                </label>
+                            <ul class="mSub meSub1">
+
+                                <li><a href="">Vision</a>
+                                </li>
+                                <li><a href="">Commitment</a></li>
+                                <li><a href="">공익재단</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <input type="radio" class="meItem" id="li2_ck">
+                            <label for="li2_ck" class="mename">Magazine</label>
+
+                            <ul class="mSub meSub2">
+
+                                <li><a href="">lanoa magazine</a></li>
+                                <li><a href="">Commitment</a></li>
+                                <li><a href="">공익재단</a></li>
+                            </ul>
+
+                        </li>
+                        <li>
+                            <input type="radio" class="meItem" id="li3_ck">
+
+                            <label for="li3_ck" class="mename big">Our ACTIVITIES</label>
+
+                            <ul class="mSub meSub3">
+                                <li><a href="">지역봉사활동</a></li>
+                                <li><a href="">연구개발</a></li>
+
+                            </ul>
+                        </li>
+                        <li>
+
+                            <input type="radio" class="meItem" id="li4_ck">
+
+                            <label for="li4_ck" class="mename">MEET US</label>
+
+                            <ul class="mSub meSub4">
+                                <li><a href="">리뷰</a></li>
+                                <li><a href="">고객의 소리</a></li>
+                                <li><a href="">제안</a></li>
+                                <li><a href="">라노아 본사</a></li>
+                            </ul>
+                        </li>
+                    </div>
+
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <a href="#page1" class="totop"><span>top</span></a>
+    <section class="page" id="page1">
+        <div class="imgSlide" id="visual">
+            <p class="prev"></p>
+            <p class="next"></p>
+            <div class="gallery">
+                <img src="./images/bg1.png" alt="" class="banImg">
+                <img src="./images/bg2-2.png" alt="" class="banImg">
+                <img src="./images/bg3.png" alt="" class="banImg">
+                <img src="./images/sub_bg4.jpg" alt="" class="banImg">
+            </div>
+
+            <ul class="banCon">
+                <li class="banTitleBox">
+                    <h2 class="banTit">Naturalism<br>Cosmetics Brand</h2>
+                    <a href="" class="more">더보기</a>
+                </li>
+                <li class="banTitleBox">
+                    <h2 class="banTit">Hot Summer<br>citrus party!</h2>
+                    <a href="" class="more">더보기</a>
+                </li>
+                <li class="banTitleBox">
+                    <h2 class="banTit">lavender puple<br>be happy!</h2>
+                    <a href="" class="more">더보기</a>
+                </li>
+                <li class="banTitleBox">
+                    <h2 class="banTit">LANOA <br>TOGETHER</h2>
+                    <a href="" class="more">더보기</a>
+                </li>
+            </ul>
+            <p class="paging"></p>
+
+
+        </div>
+    </section>
+    <section class="page" id="page2">
+        <div class="slideWrap">
+            <div class="slideBox">
+
+                <div class="raBox">
+                    <input type="radio" name="ra21" class="rabtn" id="p2sl1" checked>
+                    <input type="radio" name="ra21" class="rabtn" id="p2sl2">
+                    <input type="radio" name="ra21" class="rabtn" id="p2sl3">
+                    <input type="radio" name="ra21" class="rabtn" id="p2sl4">
+                    <input type="radio" name="ra21" class="rabtn" id="p2sl5">
+                </div>
+                <ul class="imgmaga">
+                    <li><label for="p2sl1" class="pg2l" id="imr1"></label></li>
+                    <li><label for="p2sl2" class="pg2l" id="imr2"></label></li>
+                    <li><label for="p2sl3" class="pg2l" id="imr3"></label></li>
+                    <li><label for="p2sl4" class="pg2l" id="imr4"></label></li>
+                    <li><label for="p2sl5" class="pg2l" id="imr5"></label></li>
+                </ul>
+
+
+                <ul class="pg2ConWrap">
+                    <li class="imgslp" id="pgsl11">
+                        <img src="./images/pg2_sl1.png" alt="">
+
+                        <div class="txtBox right">
+                            <h2 class="pg2Title"> BEAUTY SUMMER</h2>
+                            <p class="pg2date pa">여름 기획전</p>
+                            <p class="pg2date pb">2018.06</p>
+                            <h1 class="imgname">SUMMER LANOA</h1>
+                            <p class="textimg">뜨거운 햇빛에 자극받는 피부를 위해<br>라노아의 썬케어와 진정 라인을 만나보세요!</p>
+
+                            <a href="" class="more3">더보기></a>
+
+                            <div class="smimgWrap">
+                                <img src="./images/sunblock_texture.png" alt="">
+                                <div class="pgroup">
+                                    <p class="yellow">SPF50 PA++++</p>
+                                    <p class="yellow">썬바이 썬크림</p>
+                                    <p>12000won</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="imgslp" id="pgsl12">
+                        <img src="./images/pg2_sl2.png" alt="">
+
+                        <div class="txtBox right">
+                            <h2 class="pg2Title"> BEAUTY SUMMER</h2>
+                            <p class="pg2date pa">남성 스킨케어</p>
+                            <p class="pg2date pb">2018.06</p>
+                            <h1 class="imgname">Men's SkinCare</h1>
+                            <p class="textimg">끈적함은 줄이고<br>수분감만 가득담아 특별한 당신에게 </p>
+
+                            <a href="" class="more3">더보기></a>
+
+                            <div class="smimgWrap">
+                                <img src="./images/toner_texture.png" alt="" style="border-image-width:80%; ">
+                                <div class="pgroup">
+                                    <p class="yellow">Posh Revolution</p>
+                                    <p class="yellow">스킨 로션 크림</p>
+                                    <p>76000won</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+
+
+    </section>
+    <section class="page" id="page3">
+
+
+
+
+    </section>
+    <section class="page" id="page4">
+
+
+
+
+    </section>
+    <footer class="ft">
+
+        <ul class="tfoot">
+            <li><a href="">회사소개</a></li>
+            <li><a href="">이용가이드</a></li>
+            <li><a href="">이용약관</a></li>
+            <li><a href="">개인정보 취급방침</a></li>
+            <li><a href="">가맹/대량문의</a></li>
+        </ul>
+        <p>주식회사 주오코스메틱스:서울시 송파구 새말로 183 2층(문정동, 금성빌딩) </p>
+        <p>사업자 등록번호 : 215-87-89011</p>
+        <p>통신판매업 신고 번호 : 제 2014-서울 송파-0314호</p>
+        <p>대표:윤현철</p>
+        <p>개인정보 취급자 : 김은희</p>
+        <p>고객센터:1661-7873 </p>
+        <p>Email:juocosme@naver.com</p>
+        <p>&copy;LANOA.ALL RIGHT RESERVED.</p>
+        <img class="company" src="" alt="">
+        <img class="logo" src="" alt="">
+
+    </footer>
+</body>
+
+</html>
