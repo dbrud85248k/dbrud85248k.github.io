@@ -15,7 +15,8 @@ html {
 body {
     color: #666;
     font-size: 14px;
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    overflow-x: hidden;
 }
 
 ul {
@@ -37,6 +38,8 @@ a {
 .wrap {
     width: 100%;
     height: 100%;
+    max-width: 1920px;
+    min-width: 1280px;
 }
 
 header.hd {
@@ -46,7 +49,7 @@ header.hd {
     position: fixed;
     z-index: 9999;
     border-bottom: 2px solid #002d98;
-    background: rgba(255,255,255,0.7);
+    background: rgba(255, 255, 255, 0.7);
 }
 
 input[type=checkbox] {
@@ -412,11 +415,11 @@ input[name=subRa]:checked ~ label {
 }
 
 ul.slideFrame {
-    width:  400%;
+    width: 400%;
 }
 
 ul.slideFrame li {
-    width:  25%;
+    width: 25%;
     float: left;
     position: relative;
 }
@@ -424,11 +427,11 @@ ul.slideFrame li {
 .tWrap {
 
 
-    position:  absolute;
+    position: absolute;
     width: 600;
-    width:  600px;
-    height:  150px;
-    z-index:  99;
+    width: 600px;
+    height: 150px;
+    z-index: 99;
     top: 201px;
     left: 533px;
 }
@@ -440,18 +443,19 @@ h2.txtTitle {
 }
 
 p.pBox {
-    display:  block;
-    color:  #fff;
-    font-size:  16px;
+    display: block;
+    color: #fff;
+    font-size: 16px;
     line-height: 1.5;
-    font-weight:  normal;
+    font-weight: normal;
 }
 
 a.more {
-    display:  block;
-    font-size:  23px;
+    display: block;
+    font-size: 23px;
     color: #d21;
 }
+
 #page1 {
     width: 960px;
     height: 520px;
@@ -617,9 +621,141 @@ h3.grdColName {
 
 }
 
-.ft{
+#footer {
+
+    clear: both;
+    background: #ffffff;
+    margin-top: 580px;
+    background: #eee;
     width: 100%;
     height: 100px;
-    background: #333;
-    clear: both;
+    box-sizing: border-box;
+    padding: 20px 450px;
+
+}
+
+.fnb {
+    width: 40%;
+
+    float: left;
+
+}
+
+
+.fnb a {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    float: left;
+    font-size: 16px;
+    margin-left: 20px;
+
+}
+
+
+.fnr {
+    width: 60%;
+    float: right;
+    margin-right: -148px;
+}
+
+#footer p {
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #333;
+
+}
+
+.collapsFrame {
+    width: 900px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: fixed;
+    top: 500px;
+    left: -805px;
+    z-index: 9999;
+
+    transition: 0.6s;
+    cursor: pointer;
+
+}
+
+.collapImgFrame {
+    width: 500px;
+    height: 400px;
+
+    overflow: hidden;
+}
+
+.collapImgFrame img {
+    display: block;
+    width: 320px;
+    height: auto;
+    left: 35px;
+    position: absolute;
+    top: 51px;
+}
+
+.collapCol {
+    width: 500px;
+    height: 300px;
+
+
+ 
+    box-sizing: border-box;
+}
+
+.collapColBox {
+    width: 401px;
+    height: 300px;
+    right: 123px;
+    top: 92px;
+    position: absolute;
+ 
+    box-sizing: border-box;
+
+}
+h3.collapName.wTxt {
+    position: absolute;
+    transform: rotate(90deg);
+    color: #fff;
+    top: 187px;
+    right: -57px;
+}
+
+.collapCol a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.collapTitwTxt {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.collapDesctxt {
+    display: block;
+    width: 400px;
+    color: #fff;
+    font-size: 14px;
+
+}
+
+label.closeBtn {
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 99px;
+    top: 45px;
+    font-size: 47px;
+}
+.cnb {
+    width: 190px;
+
 }

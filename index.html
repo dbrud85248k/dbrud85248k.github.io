@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <title>신세계지금만들고있는파일</title>
-<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo|Noto+Sans+KR|Noto+Serif+JP|Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo|Noto+Sans+KR|Noto+Serif+JP|Roboto|Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
-<!--    
+    <!--    
 font-family: 'Nanum Gothic', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Noto Serif JP', sans-serif;
@@ -21,8 +22,8 @@ font-family: 'Nanum Myeongjo', serif;
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
-    
-    $(document).ready(function(){
+
+        $(document).ready(function(){
         var wd = parseInt($("#vsSl1").width());
         var count1 = $(".slideFrame li").length;
         
@@ -43,8 +44,20 @@ font-family: 'Nanum Myeongjo', serif;
              slid();
         }, 3000);
             
-        
+            
+            
+        $(".collapsFrame").hover(function(){
+          $(this).css("left","-10px");
+        });   
+            
+            
+        $(".collapsFrame").mouseleave(function(){
+            $(this).css("left","-805px");
+        });    
+            
     });
+            
+        
     
     </script>
 
@@ -149,9 +162,9 @@ font-family: 'Nanum Myeongjo', serif;
                             </label>
                             <div class="sub">
                                 <figure class="img left">
-                                    <h2></h2>
+                                    <h2>Brand</h2>
 
-                                    <p></p>
+                                    <p>신세계 인터네셔날<br> 입점브랜드를 소개합니다.</p>
                                 </figure>
                                 <div class="subMenu right">
                                     <ul>
@@ -188,9 +201,9 @@ font-family: 'Nanum Myeongjo', serif;
                             </label>
                             <div class="sub">
                                 <figure class="img left">
-                                    <h2></h2>
+                                    <h2>  MEDIA</h2>
 
-                                    <p></p>
+                                    <p>트랜드를 앞서나가는 기업이 되겠습니다.</p>
                                 </figure>
                                 <div class="subMenu right">
                                     <ul>
@@ -217,9 +230,9 @@ font-family: 'Nanum Myeongjo', serif;
                             <div class="sub">
 
                                 <figure class="img left">
-                                    <h2></h2>
+                                    <h2>CAREER</h2>
 
-                                    <p></p>
+                                    <p>함께 성장하는 기업, 여러분의 열정을 응원합니다.</p>
                                 </figure>
                                 <div class="subMenu right">
                                     <ul>
@@ -244,8 +257,8 @@ font-family: 'Nanum Myeongjo', serif;
                             <label for="sub_open5">INVESTORS</label>
                             <div class="sub">
                                 <figure class="img left">
-                                    <h2></h2>
-                                    <p></p>
+                                    <h2>INVESTORS</h2>
+                                    <p>신세계인터네셔날 기업운영</p>
                                 </figure>
                                 <div class="subMenu right">
                                     <ul>
@@ -281,9 +294,9 @@ font-family: 'Nanum Myeongjo', serif;
                             <div class="sub">
 
                                 <figure class="img left">
-                                    <h2></h2>
+                                    <h2>CSR</h2>
 
-                                    <p></p>
+                                    <p>기업을 이끄는 올바른 정신</p>
                                 </figure>
                                 <div class="subMenu right">
                                     <ul>
@@ -318,7 +331,7 @@ font-family: 'Nanum Myeongjo', serif;
                             <label for="sub_open7">CONTACT</label>
                             <div class="sub">
                                 <figure class="img left">
-                                    <h2></h2>
+                                    <h2>CONTACT</h2>
 
                                     <p></p>
                                 </figure>
@@ -431,41 +444,41 @@ font-family: 'Nanum Myeongjo', serif;
                     <li>
 
                         <img src="./imagesA/vs2.jpg" alt="">
-                         <div class="tWrap">
-                        <h2 class="txtTitle">COSMETICS</h2>
-                        <p class="pBox">
+                        <div class="tWrap">
+                            <h2 class="txtTitle">COSMETICS</h2>
+                            <p class="pBox">
 
-                            산타 마리아 노벨라(SANTA MARIA NOVELLA), 바이레도(BYREDO)와 같은 글로벌 뷰티 브랜드, 비디비치 및 신세계인터코스코리아를 통해서 한국을 대표하는 토털 뷰티 기업의 새로운 지평선을 열겠습니다.</p>
-                        <p><span>SHINSEGAE </span>INTERNATIONAL</p>
-                        <a href="" class="more">fashion</a>
-                    </div>
+                                산타 마리아 노벨라(SANTA MARIA NOVELLA), 바이레도(BYREDO)와 같은 글로벌 뷰티 브랜드, 비디비치 및 신세계인터코스코리아를 통해서 한국을 대표하는 토털 뷰티 기업의 새로운 지평선을 열겠습니다.</p>
+                            <p><span>SHINSEGAE </span>INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
 
                     </li>
 
                     <li>
                         <img src="./imagesA/vs3.jpg" alt="">
-                          <div class="tWrap">
-                        <h2 class="txtTitle">LIVING</h2>
-                        <p class="pBox">
-                            자주 쓰는 것들의 최상'을 제시해 한국형 라이프스타일을 제안합니다. JAJU는 '가장 좋은 선택'들로 내 생활을 채울 수 있도록 해줍니다. 사람들이 자주 쓰는 것들에서 과연 무엇이 최상인지, 그 기준을 만들고 제안합니다. 시대와 소비자들의 삶을 면밀히 관찰하고, 진정으로 필요한 기능과 가치가 무엇인지 끊임없이 .</p>
-                        <p><span>SHINSEGAE </span>INTERNATIONAL</p>
-                        <a href="" class="more">fashion</a>
-                    </div>
+                        <div class="tWrap">
+                            <h2 class="txtTitle">LIVING</h2>
+                            <p class="pBox">
+                                자주 쓰는 것들의 최상'을 제시해 한국형 라이프스타일을 제안합니다. JAJU는 '가장 좋은 선택'들로 내 생활을 채울 수 있도록 해줍니다. 사람들이 자주 쓰는 것들에서 과연 무엇이 최상인지, 그 기준을 만들고 제안합니다. 시대와 소비자들의 삶을 면밀히 관찰하고, 진정으로 필요한 기능과 가치가 무엇인지 끊임없이 .</p>
+                            <p><span>SHINSEGAE </span>INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
 
                     </li>
 
                     <li>
                         <img src="./imagesA/vs4.jpg" alt="">
                         <div class="tWrap">
-                        <h2 class="txtTitle">S.I.VILLEAGE</h2>
-                        <p class="pBox">해외 유명 럭셔리 브랜드부터 컨템포러리 디자이너 브랜드, 매스 브랜드에 이르기까지 다양한 수입 브랜드 포트폴리오를 국내에 소개하고 있으며, 자체 패션 브랜드를 성공적으로 운영하고 있습니다.</p>
-                        <p><span>SHINSEGAE</span> INTERNATIONAL</p>
-                        <a href="" class="more">fashion</a>
-                    </div>
+                            <h2 class="txtTitle">S.I.VILLEAGE</h2>
+                            <p class="pBox">해외 유명 럭셔리 브랜드부터 컨템포러리 디자이너 브랜드, 매스 브랜드에 이르기까지 다양한 수입 브랜드 포트폴리오를 국내에 소개하고 있으며, 자체 패션 브랜드를 성공적으로 운영하고 있습니다.</p>
+                            <p><span>SHINSEGAE</span> INTERNATIONAL</p>
+                            <a href="" class="more">fashion</a>
+                        </div>
 
                     </li>
                 </ul>
-                
+
                 <div class="btnbox">
                     <button class="prev"><i class="fas fa-chevron-left"></i></button>
                     <button class="next"><i class="fas fa-chevron-right"></i></button>
@@ -524,11 +537,12 @@ font-family: 'Nanum Myeongjo', serif;
 
 
 
-        <footer class="ft">
-            <nav class="topft">
+        <footer id="footer">
+            <nav class="fnb">
                 <ul>
-
                     <li><a href="">영상정보처리기기 운영방침</a></li>
+
+
                     <li><a href="">개인정보 처리방침</a></li>
                     <li><a href="">Recruit</a></li>
                     <li><a href="">Partner Support</a>
@@ -536,28 +550,32 @@ font-family: 'Nanum Myeongjo', serif;
                     <li><a href="">SITEMAP</a></li>
                 </ul>
             </nav>
-            <p class="copyright">COPYRIGHT 2016 (C) BY SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED
-            </p>
+            <div class="fnr">
 
+
+                <p class="copyright">COPYRIGHT 2016 (C) BY SHINSEGAE INTERNATIONAL. ALL RIGHTS RESERVED
+                </p>
+
+            </div>
         </footer>
-
 
         <aside class="collapsFrame">
             <!--                ( ul.cnb>(li.collapCol>div.collapImgFrame>img)+(div.collapCol>a>div.collapTxtFrame>(h3.collapTit.wTxt>span.tit)+p.collapDesc.txt)+label[for=collapCk1].closeBtn+h3.collapName.wTxt)-->
             <ul class="cnb">
                 <li class="collapCol">
-                    <div class="collapImgFrame"><img src="" alt=""></div>
+                    <div class="collapImgFrame"><img src="./imagesA/com11.jpg" alt=""></div>
                 </li>
-                <div class="collapCol">
+                <div class="collapColBox">
                     <a href="">
                         <div class="collapTxtFrame">
-                            <h3 class="collapTit wTxt"><span class="tit"></span></h3>
-                            <p class="collapDesc txt"></p>
+                            <h3 class="collapTitwTxt">We share every moment in your life</h3>
+                            <p class="collapDesctxt">신세계인터내셔날은 고객이 지향하는 가치를 공유하고 고객의 아름다운 삶을 꿈꾸는 국내 대표 라이프스타일 기업입니다. 
+언제 어디서든지 고객에게 최고의 감동과 행복을 드리고자 끊임없이 노력하고 소통하는 라이프 파트너가 되는 것이 우리의 비전이자 목표입니다.</p>
                         </div>
                     </a>
                 </div>
-                <label for="collapCk1" class="closeBtn"></label>
-                <h3 class="collapName wTxt"></h3>
+                <label for="collapCk1" class="closeBtn">X</label>
+                <h3 class="collapName wTxt">SHINSEGAE INTERNATIONAL</h3>
             </ul>
         </aside>
 
